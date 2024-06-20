@@ -11,9 +11,18 @@ export const API_OPTIONS = {
   method: "GET",
   headers: {
     accept: "application/json",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlMWNiMzlkNzA0N2IwYmU4MDZhNTliM2FjNTNkM2JkYSIsInN1YiI6IjY2NzE4YjFhZDViNjU2OTdmYTBkZmE2MiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.WgTWD5oAmcXfbZFrHjvaTLqXaIDrrCvOs2uZE627Z3Q",
+    Authorization: "Bearer " + process.env.REACT_APP_TMDB_KEY,
   },
 };
 
 export const POSTER_URL = "https://image.tmdb.org/t/p/w500/";
+
+export const SUPPORTED_LANG = [
+  { identifier: "en", name: "English" },
+  { identifier: "hi", name: "Hindi" },
+  { identifier: "es", name: "Spanish" },
+];
+
+export const OPENAI_KEY = process.env.REACT_APP_OPENAI_KEY;
+
+export const GROQ_KEY = process.env.REACT_APP_GROQ_KEY;
